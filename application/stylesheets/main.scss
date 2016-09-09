@@ -1,0 +1,353 @@
+// Fonts to use
+// font-family: 'Shadows Into Light', cursive;
+// font-family: 'Bitter', serif;
+// font-family: 'Droid Sans', sans-serif;
+// font-family: 'Poiret One', cursive;*/
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+@import 'partials/mixin';
+@import 'partials/vendor/scss/font-awesome';
+@import 'partials/animate';
+@import 'partials/nav';
+
+
+body {
+	//background-color: #D1D1D1;
+	margin: 0;
+}
+
+//Jumbotron section
+.jumbomine {
+    // background-image: linear-gradient( rgba(0, 50, 100, 0.5), rgba(0, 0, 0, 0.7) ), url("../assets/img/pic.jpg");
+    // width: 100%;
+    // overflow: hidden;
+    // margin: 0 auto;
+    // background-position: center center;
+    // height: 500px;
+    // text-align: center;
+
+	//background-image: url('https://unsplash.it/1440/1080?image=2'); 
+	// background-repeat: no-repeat;
+	// background-size: cover;
+ //  	min-width: 100%;
+ //  	min-height: 100%;
+ 		width: 100%;
+ 		height: 100%;
+ 		min-height: 1000px;
+ 		position:relative;
+
+  	&::before {
+  		content: '';
+  		position: absolute;
+  		top: 0;
+  		left: 0;
+  		bottom: 0;
+  		right: 0;
+  		background-image: url('https://unsplash.it/1280/1080?image=4'); 
+  		background-repeat: no-repeat;
+		background-size: cover;
+  		min-width: 100%;
+  		min-height: 100%;
+  		animation: images 10s infinite;
+  		overflow: auto;
+  	}
+}
+
+// @keyframes images {
+// 	35% {
+// 		background-image: url('https://unsplash.it/1280/1080?image=2');
+// 	}
+
+// 	55% {
+// 		background-image: url('https://unsplash.it/1280/1080?image=3');
+// 	}
+
+// 	85% {
+// 		background-image: url('https://unsplash.it/1280/1080?image=4');
+// 	}
+// }
+
+
+.jumbo-content {
+	font-family: 'Droid Sans', sans-serif;
+	text-align: center;
+	line-height: 1.25;
+	//color: #0CBBD7;
+	color: #fff;
+	margin-top: 200px;
+	position: relative;
+	z-index: 100;
+}
+
+.jumbo-content h3{
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.jumbo-content h2 {
+    font-size: 2em;
+}
+
+
+.about-button,
+.about-button:link,
+.about-button:visited {
+	font-size: 2em;
+	color: #0CBBD7;
+
+	&:hover,
+	&:active {
+		color: #DDDDDD;
+	}
+}
+
+//ABOUT SECTION STYLE
+.about-wrapper{
+	position: relative;
+	//background-color: #000080;
+	background-color: rgba(46,46,46,0.92);
+	border-bottom: 5px solid black;
+	border-top: 5px solid black;
+	padding-bottom: 1em;
+	margin-bottom: 2em;
+	margin-top: 2em;
+
+	.main-title{
+		font-size: 3.5em;
+	 	text-align: center;
+	 	font-family: 'Shadows Into Light', cursive;
+	 	padding: 0;
+	 	margin: 0;
+	 	margin-bottom: 1em;
+	 	color: #0CBBD7;
+	 	font-weight: bold;
+	}
+	.title2 {
+		font-size: 2.5em;
+	 	text-align: center;
+	 	font-family: 'Shadows Into Light', cursive;
+	 	padding: 0;
+	 	margin: 0;
+	 	margin-bottom: 1em;
+	 	color: #0CBBD7;
+	 	font-weight: bold;
+	}
+
+	.main-content {
+		padding: 0;
+		margin: 0;
+	}
+
+	p {
+		font-size: 20px;
+	}
+}
+
+.about-img {
+	border-radius: 50px;
+}
+
+#about {
+	font-family: 'Droid Sans', sans-serif;
+	clear: both;
+	color: #FFFFFF;
+	margin: 0 auto;
+	margin-top: 2em;
+	text-align: center;
+	width: 70%;
+}
+.list-container{
+	display: flex;
+	//flex-wrap: wrap;
+	-webkit-justify-content: center; /* Safari */
+  	justify-content:         center;
+	//justify-content: space-around;
+}
+
+.main-list {
+	list-style: none;
+	line-height: 2;
+}
+
+.icon {
+	font-size: 2em;
+}
+
+
+//END ABOUT SECTION STYLE
+
+//slide show style
+
+.slideshow {
+	margin: 0px auto; // center
+  	height:500px; 
+  	text-align:center; 
+  	overflow: hidden;
+	img {
+		// position: absolute;
+		background-size: cover;
+		display: none;
+		overflow: hidden;
+	}
+}
+
+.slideshow-container {
+	width: 100%;
+	overflow: hidden;
+    border-radius: 2em;
+    margin-bottom: 2em;
+}
+//END SLIDE SHOW STYLE
+
+//Projects section style
+#projects {
+	//background-color: #000080;
+	background-color: rgba(46,46,46,0.92);
+	min-width: 100%;
+	padding-bottom: 1em;
+	border-top: 5px solid black;
+	border-bottom: 5px solid black;
+
+	h1 {
+		text-align: center;
+	 	font-family: 'Shadows Into Light', cursive;
+	 	font-size: 4em;
+	 	padding: 0;
+	 	margin: 0;
+	 	margin-top: 1em;  
+	 	margin-bottom: 1em;
+	 	color: #0CBBD7;
+	 	font-weight: bold;
+
+	}
+}
+
+.projects-container {
+	margin: 0 auto;
+	// margin-left: 10em;
+	overflow: auto;
+	
+	a {
+		display: block;
+		float: left;
+		width: 100%;
+		text-align: center;
+		padding-bottom: 20px;
+
+	}
+
+ 	@include breakpoint(medium) {
+		padding-left: 8.5em;
+		margin: 0 auto;
+
+		a { width: 40%;}
+	}
+
+	@include breakpoint(large) {
+		// width: 1450px;
+		float: none;
+		display: inline-block;
+		padding-left: 100px;
+		padding-top: 1em;
+
+		a { width: 29%;}
+	}
+	
+}
+
+
+.project-img {
+	max-width: 18.750em;
+	max-height:18.750em;
+	margin-left: 2%;
+	border: 5px solid #C6C6C6;   
+
+	&:hover {
+		-webkit-box-shadow: -4px 11px 72px 9px rgba(255,255,255,1);
+		-moz-box-shadow: -4px 11px 72px 9px rgba(255,255,255,1);
+		box-shadow: -4px 11px 72px 9px rgba(255,255,255,1);
+	}
+}
+
+// .hangman {
+// 	min-height:300px;
+// }
+
+.subtext {
+	font-size: 20px;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	padding: 0;
+	margin-top: 1em;
+	font-family: 'Lato', sans-serif; 
+
+}
+
+//GITHUB SECTION STYLE 
+#github {
+	min-width: 100%;
+	background-color: rgba(46,46,46,0.92);
+	padding-top: 2em;
+	padding-bottom: 2em;
+	margin-bottom: 2em;
+	border-top: 5px solid black;
+	border-bottom: 5px solid black;
+	margin-top: 2em;
+	color: #FFFFFF;
+	text-align: center;
+	font-family: 'Droid Sans', sans-serif; 
+	.github-icon {
+		font-size: 100px;
+		color:#0CBBD7;
+
+		&:hover {
+			color: white;
+		}
+	}
+
+	p {
+		font-size: 20px;
+		color: #FFFFFF;
+		font-weight: bold;
+		text-align: center;
+		padding: 0;
+		margin-top: 1em;
+		font-family: 'Bitter', serif; 
+	}
+}
+
+
+
+//END GIT HUB SECTION
+
+//FOOTER
+
+.main-footer {
+	//background-color: #808000;
+	background-color: #D1D1D1;
+	text-align: center;
+	color: black;
+	margin: 0;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-top: 5px solid black;
+	font-family: 'Bitter', serif; 
+
+	a {
+		color: black;
+	}
+
+	.icon {
+		font-size: 2.5em;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+
